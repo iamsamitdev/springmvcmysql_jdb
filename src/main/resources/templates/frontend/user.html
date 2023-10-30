@@ -1,0 +1,46 @@
+<html layout:decorate="~{frontend/layouts/default_layout}">
+<head>
+    <title>Users List</title>
+</head>
+<body>
+    <div layout:fragment="content">
+
+        <div class="container-fluid">
+
+            <div class="row py-4">
+                <div class="col-md-6"><h2>User List</h2></div>
+                <div class="col-md-6 text-right">
+                    <a href="/adduser" class="btn btn-info">Add new</a>
+                </div>
+            </div>
+
+            <div class="row px-2">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th>ID</th>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                            <th>Manage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@email.com</td>
+                            <td style="width: 180px;">
+                                <a class="btn btn-warning">Edit</a>
+                                <a class="btn btn-danger" onclick="return confirm('Confirmed to delete this item ?')">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
